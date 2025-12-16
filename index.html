@@ -3,24 +3,35 @@
 <head>
   <meta charset="utf-8">
 
+  <!-- iOS PWA SETTINGS -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-title" content="RightHand">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-  <link rel="apple-touch-icon" sizes="180x180"
-        href="https://res.cloudinary.com/dk4qanniz/image/upload/v1765866413/_ios-180_mrfzej.png">
+  <!-- iOS HOME SCREEN ICON -->
+  <link
+    rel="apple-touch-icon"
+    sizes="180x180"
+    href="https://res.cloudinary.com/dk4qanniz/image/upload/v1765866413/_ios-180_mrfzej.png"
+  >
 
+  <!-- VIEWPORT -->
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
   <title>RightHand</title>
 </head>
 
 <body>
+  <!--
+    IMPORTANT:
+    iOS Safari requires a short delay so it can read the icon metadata
+    BEFORE redirecting to Apps Script.
+  -->
   <script>
-    window.location.replace(
-      "https://script.google.com/macros/s/AKfycbzkiAXILJ4iXiG9FulQChDASc6XTc-ZZkaoODazd44YG-mEsRNiWqF1pY68cF_aA_1i4A/exec"
-    );
+    setTimeout(function () {
+      window.location.href =
+        "https://script.google.com/macros/s/AKfycbzkiAXILJ4iXiG9FulQChDASc6XTc-ZZkaoODazd44YG-mEsRNiWqF1pY68cF_aA_1i4A/exec";
+    }, 100);
   </script>
 </body>
 </html>
-
-
